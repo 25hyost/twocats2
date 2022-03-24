@@ -43,7 +43,7 @@ WINDOW.fill(white)
 font = pygame.font.Font('./Fonts/Merriweather/Merriweather-Black.ttf', 15)
 
 # create your text
-text = font.render('Welcome!', True, black, white)
+text = font.render('Code by - Helen Yost and Henry Aul', True, black, white)
 textRect = text.get_rect()
 
 text2 = font.render('Art by - Sarah', True, black, white)
