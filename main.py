@@ -46,13 +46,17 @@ font = pygame.font.Font('./Fonts/Merriweather/Merriweather-Black.ttf', 15)
 text = font.render('Welcome!', True, black, white)
 textRect = text.get_rect()
 
+text2 = font.render('Art by - Sarah', True, black, white)
+textRect2 = text2.get_rect()
+
 # position the text
 textRect.center = (WIDTH // 2.5, HEIGHT // 9)
-
+textRect2.center = (WIDTH // 2.5, HEIGHT // 5.5)
 # display text
 WINDOW.blit(text, textRect)
 pygame.display.flip()
-
+WINDOW.blit(text2, textRect2)
+pygame.display.flip()
 # draw shape function
 def drawShape():
   global my_images
