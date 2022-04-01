@@ -9,8 +9,8 @@ os.environ['SDL_VIDEO_CENTERED'] = '1'
 pygame.init()
 
 # constants
-WIDTH = 400
-HEIGHT = 400
+WIDTH = 1440
+HEIGHT = 900
 FPS = 5
 
 # RGB colors
@@ -32,7 +32,7 @@ pygame.image.load('./Assets/sarah_v3_3.png')
 
 # changes size of all images to fit screen
 for i in range(len(my_images)):
-    my_images[i] = pygame.transform.scale(my_images[i], (400, 300))
+    my_images[i] = pygame.transform.scale(my_images[i], (400, 400))
 
 # set Window
 WINDOW = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -40,18 +40,18 @@ pygame.display.set_caption("Cats!")
 WINDOW.fill(white)
 
 # set up your font
-font = pygame.font.Font('./Fonts/Merriweather/Merriweather-Black.ttf', 15)
+font = pygame.font.Font('./Fonts/Merriweather/Merriweather-Black.ttf', 40)
 
 # create your text
 text = font.render('Code by - Helen Yost and Henry Aul', True, black, white)
 textRect = text.get_rect()
 
-text2 = font.render('Art by - Sarah', True, black, white)
+text2 = font.render('Art by - Sarah Dougherty', True, black, white)
 textRect2 = text2.get_rect()
 
 # position the text
-textRect.center = (WIDTH // 2.5, HEIGHT // 9)
-textRect2.center = (WIDTH // 2.5, HEIGHT // 5.5)
+textRect.center = (WIDTH // 2, HEIGHT // 9)
+textRect2.center = (WIDTH // 2, HEIGHT // 5)
 # display text
 WINDOW.blit(text, textRect)
 pygame.display.flip()
@@ -63,7 +63,7 @@ def drawShape():
   global image_count
   if (image_count == 3):
     image_count = 0
-  WINDOW.blit(my_images[image_count], (0, 100))
+  WINDOW.blit(my_images[image_count], (500, 270))
   pygame.display.flip()
   image_count += 1
   
